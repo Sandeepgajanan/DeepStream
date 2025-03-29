@@ -37,7 +37,7 @@ const Header = () => {
   }, [searchText]);
 
   return (
-    <div className="grid grid-flow-col  h-16 w-full max-sm:py-1  items-center gap-10  max-sm:h-10 max-sm:gap-1 max-sm:mb-1 ">
+    <div className="grid grid-flow-col  h-16 w-full max-sm:py-2  items-center gap-10  max-sm:h-10 max-sm:justify-between max-sm:mb-1 ">
       <div className="flex  gap-4 max-sm:gap-1  col-span-2 px-2 ">
         <button onClick={handleToggle}>
           <i className="ri-menu-line ri-lg  text-zinc-600 cursor-pointer  rounded-full w-10 h-10 flex items-center justify-center hover:bg-zinc-200 transition-colors max-sm:w-7 max-sm:h-7     "></i>
@@ -46,12 +46,12 @@ const Header = () => {
           <img
             src="../logo.png"
             alt="logo"
-            className="h-16 cursor-pointer max-sm:h-8 "
+            className="h-16 cursor-pointer max-sm:hidden"
           />
         </Link>
       </div>
 
-      <div className=" max-sm:ml-2 col-span-12  h-full content-center px-2">
+      <div className=" max-sm:ml-2 col-span-12  h-full content-center px-2 max-sm:col-span-4">
         <div className="flex ">
           <input
             type="text"
@@ -65,7 +65,7 @@ const Header = () => {
           <i className="ri-search-line ri-lg w-12 px-2 flex items-center justify-center h-10 rounded-r-full  bg-zinc-200  text-gray-500 cursor-pointer hover:bg-zinc-300 transition-colors max-sm:h-8"></i>
         </div>
         {searchState && (
-          <div className="bg-white rounded-md px-2 py-4  fixed w-[45.5rem] border-sky-50 border shadow-md z-20">
+          <div className="bg-white rounded-md px-2 py-4  fixed w-[45.5rem] max-sm:left-1 max-sm:w-72  border-sky-50 border shadow-md z-20">
             <ul className="space-y-2">
               {suggestions?.map((item, index) => (
                 <li key={index}>
