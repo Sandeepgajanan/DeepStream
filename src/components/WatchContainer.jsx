@@ -9,7 +9,7 @@ const WatchContainer = () => {
   const videoDetails = useWatchVideo(id);
 
   if (!videoDetails) return <ShimmerWatch />;
-  console.log(videoDetails);
+  
 
   return (
     <div className="flex ml-40 p-1 h-[calc(100vh-64px)] overflow-y-auto  max-sm:ml-0 max-sm:p-2 max-sm:flex-col  w-full">

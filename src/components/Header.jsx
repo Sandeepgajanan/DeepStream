@@ -72,6 +72,7 @@ const Header = () => {
                   <Link
                     to={`/watch/${item.videoId}`} // Navigate to Watch Page with Video ID
                     className="flex items-center gap-2 py-2 px-3 rounded-md hover:bg-zinc-50 transition-colors cursor-pointer"
+                    onClick={handleToggle}
                   >
                     <i className="ri-search-line ri-md text-zinc-950"></i>
                     <h2 className="text-sm font-bold">{item.title}</h2>
